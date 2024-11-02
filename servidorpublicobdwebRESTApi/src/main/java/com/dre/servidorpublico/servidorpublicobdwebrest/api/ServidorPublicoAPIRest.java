@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.dre.servidorpublico.servidorpublicobdwebrest.entity.ServidorPublico;
 
-public interface ServidorPublicoAPIRest {
+public interface ServidorPublicoAPIRest
+{
 
 	@GetMapping("/listarServidores")
 	public ResponseEntity<List<ServidorPublico>> listarServidores();
