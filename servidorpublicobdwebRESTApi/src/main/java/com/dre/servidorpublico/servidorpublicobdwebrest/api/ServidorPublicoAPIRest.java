@@ -18,7 +18,7 @@ public interface ServidorPublicoAPIRest
 	public ResponseEntity<List<ServidorPublico>> listarServidores();
 
 	@GetMapping("/listarServidor/{matricula}")
-	public String listarServidor(@PathVariable long matricula);
+	public ResponseEntity<ServidorPublico> listarServidor(@PathVariable long matricula);
 
 	@GetMapping("/excluirServidor/{matricula}")
 	public void excluirServidor(@PathVariable long matricula);
