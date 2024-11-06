@@ -78,6 +78,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Servidor Público Não Encontrado");
 
 	}
+	
 
 	@PostMapping("/cadastrarservidor")
 	public String cadastrarServidor(ServidorPublico novoservidor) {
