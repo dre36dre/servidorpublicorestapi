@@ -50,7 +50,8 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 	}
 
 	@DeleteMapping("/excluirServidor/{matricula}")
-	public void excluirServidor(long matricula) {
+	public void excluirServidor(long matricula) 
+	{
 		
 		Optional<ServidorPublico> servidorEncontrado = servidorService.listByMatricula(matricula);
 		
