@@ -64,7 +64,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Servidor Público Não Encontrado");
 	}
 
-	
+
 	@PutMapping("/editarservidor/{matricula}")
 	public String editarServidor(long matricula, ServidorPublico servidorAlterado) {
 		
