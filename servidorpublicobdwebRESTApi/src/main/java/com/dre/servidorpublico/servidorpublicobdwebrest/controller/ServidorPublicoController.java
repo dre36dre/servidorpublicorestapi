@@ -32,7 +32,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 		this.servidorService = servidorService;
 	}
 
-	@GetMapping("/listarServidores")
+	@GetMapping("/listarservidores")
 	public ResponseEntity<List<ServidorPublico>> listarServidores() {
 		List<ServidorPublico> servidorespublicos = servidorService.listAll();
 		return new ResponseEntity<List<ServidorPublico>>(servidorespublicos,HttpStatus.OK);
@@ -49,7 +49,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Servidor Público Não Encontrado");
 	}
 
-	@DeleteMapping("/excluirServidor/{matricula}")
+	@DeleteMapping("/excluirservidor/{matricula}")
 	public void excluirServidor(long matricula) 
 	{
 		
@@ -64,7 +64,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Servidor Público Não Encontrado");
 	}
 
-	@PutMapping("/editarServidor/{matricula}")
+	@PutMapping("/editarservidor/{matricula}")
 	public String editarServidor(long matricula, ServidorPublico servidorAlterado) {
 		
 		Optional<ServidorPublico> servidorEncontrado = servidorService.listByMatricula(matricula);
@@ -79,7 +79,7 @@ public class ServidorPublicoController implements ServidorPublicoAPIRest{
 
 	}
 
-	@PostMapping("/cadastrarServidor")
+	@PostMapping("/cadastrarservidor")
 	public String cadastrarServidor(ServidorPublico novoservidor) {
 		
 		Optional<ServidorPublico> servidorEncontrado = servidorService.listByMatricula(novoservidor.getMatricula());
