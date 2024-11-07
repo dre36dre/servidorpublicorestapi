@@ -26,6 +26,7 @@ public interface ServidorPublicoAPIRest
 	@PutMapping("/editarServidor/{matricula}")
 	public String editarServidor(@PathVariable long matricula, @RequestBody  ServidorPublico servidor);
 	
+	
 	@PostMapping("/cadastrarServidor")
 	public String cadastrarServidor(@RequestBody ServidorPublico novoservidor);
 	
